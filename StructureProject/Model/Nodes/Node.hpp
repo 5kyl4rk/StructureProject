@@ -26,7 +26,7 @@ public:
 //Template definitions
 
 template<class Type>
-Node<type> :: Node()
+Node<Type> :: Node()
 {}
 
 template <class Type>
@@ -44,6 +44,6 @@ Type Node<Type> :: getData()
 template <class Type>
 void Node<Type> :: setData(Type data)
 {
-    this->data = data
+    this->data = data;
 }
 #endif /* Node_h */

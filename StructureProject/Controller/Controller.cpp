@@ -16,4 +16,15 @@ Controller :: Controller()
 void Controller :: start()
 {
     cout << "Let's do something I guess ._." << endl;
+    this->usingNodes();
+}
+
+void Controller :: usingNodes()
+{
+    Node<int> mine(5);
+    Node<string> wordHolder("Words can be stored too, wow");
+    cout << mine.getData() << endl;
+    cout << wordHolder.getData() << endl;
+    wordHolder.setData("A duck stole your words");
+    cout << wordHolder.getData() <<endl;
 }
