@@ -17,16 +17,16 @@ class LinearNode : public Node<Type>
 private:
     LinearNode<Type> * next;
 public:
-    linearNode();
+    LinearNode();
     LinearNode(Type data);
-    LinearNode(Typedata, LinearNode<Type> * next);
+    LinearNode(Type data, LinearNode<Type> * next);
     LinearNode<Type> * getNext();
     void setNext(LinearNode<Type> * next);
 };
 
 //Implementation of templates
 template <class Type>
-LinearNode<Type> :: LinearNode() : Node()
+LinearNode<Type> :: LinearNode() : Node<Type>()
 {}
 
 template <class Type>
