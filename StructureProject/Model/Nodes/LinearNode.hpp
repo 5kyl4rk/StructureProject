@@ -53,4 +53,4 @@ void LinearNode<Type> :: setNext(LinearNode<Type> * next)
     this->next = next;
 }
 
-#endif /* LinearNode_h */
+#endif /* LinearNode_hpp */
