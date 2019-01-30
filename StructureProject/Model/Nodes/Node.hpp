@@ -6,8 +6,8 @@
 //  Copyright © 2019 CTEC. All rights reserved.
 //
 
-#ifndef Node_h
-#define Node_h
+#ifndef Node_hpp
+#define Node_hpp
 
 #include <assert.h>
 
@@ -17,12 +17,17 @@ class Node
 private:
     Type data;
 public:
+    Node();
     Node(Type data);
     Type getData();
     void setData(Type data);
 };
 
 //Template definitions
+
+template<class Type>
+Node<type> :: Node()
+{}
 
 template <class Type>
 Node<Type> :: Node(Type data)
