@@ -39,6 +39,7 @@
 		A65A7434220A214E000C9D97 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		A65A7435220A214F000C9D97 /* Music.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Music.hpp; sourceTree = "<group>"; };
 		A65A7436220A214F000C9D97 /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Music.cpp; sourceTree = "<group>"; };
+		A65A7439220A2601000C9D97 /* node.uxf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = node.uxf; sourceTree = "<group>"; };
 		A6A7432322023311008A224E /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		A6A7432522023980008A224E /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		A6E16E8521FF8B000070F74A /* StructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +147,7 @@
 		A6E16E9121FF8C0A0070F74A /* Diagrams */ = {
 			isa = PBXGroup;
 			children = (
+				A65A7439220A2601000C9D97 /* node.uxf */,
 			);
 			path = Diagrams;
 			sourceTree = "<group>";
