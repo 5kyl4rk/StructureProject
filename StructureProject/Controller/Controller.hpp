@@ -12,6 +12,7 @@
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
+#include "./Tools/Timer.hpp"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ class Controller
 {
 private:
     void usingNodes();
+    Timer stopwatch;
 public:
     Controller();
     void start();

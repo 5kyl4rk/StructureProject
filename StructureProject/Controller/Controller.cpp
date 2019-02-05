@@ -15,12 +15,16 @@ Controller :: Controller()
 
 void Controller :: start()
 {
+    stopwatch.startTimer();
     cout << "Let's do something I guess ._." << endl;
     this->usingNodes();
+    stopwatch.stopTimer();
+    stopwatch.displayInformation();
 }
 
 void Controller :: usingNodes()
 {
+    
     Node<int> mine(5);
     Node<string> wordHolder("Words can be stored too, wow");
     cout << mine.getData() << endl;
