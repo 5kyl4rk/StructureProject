@@ -13,7 +13,7 @@
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
 #include "./Tools/Timer.hpp"
-
+#include "./FileController.hpp"
 using namespace std;
 
 class Controller
@@ -24,6 +24,7 @@ private:
 public:
     Controller();
     void start();
+    void testFiles();
 };
 
 #endif /* Controller_hpp */

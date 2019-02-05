@@ -18,6 +18,7 @@ void Controller :: start()
     stopwatch.startTimer();
     cout << "Let's do something I guess ._." << endl;
     this->usingNodes();
+    this->testFiles();
     stopwatch.stopTimer();
     stopwatch.displayInformation();
 }
@@ -31,4 +32,22 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("A duck stole your words");
     cout << wordHolder.getData() <<endl;
+}
+
+void Controller :: testFiles()
+{
+    vector<Music> musicReport = FileController :: musicDataToVector("../Resources/music.csv");
+    vector<CrimeData> crimeReport = FileController :: readCrimeDataToVector("../Resources/crime.csv");
+    
+    cout << "[Music]" << endl;
+    for(int index = 234; index < 255; index++)
+    {
+        cout << index << ": contents are: " << musicReport[index] << endl;
+    }
+    cout << "[Crime]" << endl;
+    for(int index = 234; index < 255; index++)
+    {
+        cout << index << ": contents are: " << crimeReport[index] << endl;
+    }
+    
 }
