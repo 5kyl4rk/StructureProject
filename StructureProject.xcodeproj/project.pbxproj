@@ -27,6 +27,7 @@
 /* Begin PBXFileReference section */
 		A65A7429220A1454000C9D97 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		A65A742A220A1454000C9D97 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
+		A65A742D220A1930000C9D97 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		A6A7432322023311008A224E /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		A6A7432522023980008A224E /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		A6E16E8521FF8B000070F74A /* StructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +55,14 @@
 				A65A742A220A1454000C9D97 /* Timer.hpp */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		A65A742C220A18D4000C9D97 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				A65A742D220A1930000C9D97 /* List.hpp */,
+			);
+			path = Structures;
 			sourceTree = "<group>";
 		};
 		A6A74322220226DF008A224E /* Nodes */ = {
@@ -104,6 +113,7 @@
 		A6E16E8F21FF8BED0070F74A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A65A742C220A18D4000C9D97 /* Structures */,
 				A6A74322220226DF008A224E /* Nodes */,
 			);
 			path = Model;
