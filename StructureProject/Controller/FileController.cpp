@@ -45,3 +45,37 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
     
     return crimeVector;
 }
+
+vector<Music> FileController :: musicDataToVector(string filename)
+{
+    vector<Music> musicVector;
+    string currentCSVLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(filename);
+    
+    if(dataFile.is_open())
+    {
+        while (!dataFile.eof())
+        {
+            getline(dataFile,currentCSVLine, '\r');
+            
+            if (rowCount != 0)
+            {
+                if(currentCSVLine.length() != 0)
+                {
+                    Music row(currentCSVLine);
+                    musicVector.push_back(row);
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close();
+    }
+    else
+    {
+        cerr << "NO FILE" << endl;
+    }
+    
+    return musicVector;
+}
