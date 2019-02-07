@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>170</y>
-      <w>230</w>
-      <h>140</h>
+      <x>306</x>
+      <y>174</y>
+      <w>138</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -23,10 +23,10 @@ bg=#FF3F72</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
-      <y>410</y>
-      <w>480</w>
-      <h>160</h>
+      <x>384</x>
+      <y>318</y>
+      <w>288</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>LinearNode&lt;Type&gt;
 --
@@ -37,16 +37,16 @@ bg=#FF3F72</panel_attributes>
 + LinearNode&lt;Type&gt;(Type, LinearNode&lt;Type&gt;*) : constructor
 + getNext() : LinearNode&lt;Type&gt; *
 setNext(LinearNode&lt;Type&gt; *) : void
-bg=#3FFCC</panel_attributes>
+bg=#3FFCD</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>300</y>
-      <w>120</w>
-      <h>130</h>
+      <x>384</x>
+      <y>252</y>
+      <w>72</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0;100.0;60.0;100.0;110.0</additional_attributes>
@@ -54,10 +54,10 @@ bg=#3FFCC</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>620</y>
-      <w>340</w>
-      <h>220</h>
+      <x>60</x>
+      <y>258</y>
+      <w>204</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>Array&lt;Type&gt;
 --
@@ -73,5 +73,116 @@ bg=#3FFCC</panel_attributes>
 + ~Array() : destructor
 bg=#F5FF00</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>408</y>
+      <w>162</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>230.0;10.0;230.0;70.0;10.0;70.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>480</y>
+      <w>180</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>/List&lt;Type&gt;/
+--
+# size : int
+--
+*List Structure methods*
+/getFromIndex(int) : Type/
+/add(Type): void/
+/addAtIndex(int, Type) : void/
+/remove(int) : Type/
+*List Accessors*
+/getSize() : int/
+/getFront() : LinearNode&lt;Type&gt; */
+/getEnd() : LinearNode&lt;Type&gt; */
+bg=#6FFC86</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>672</y>
+      <w>102</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Queue&lt;Type&gt;
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>678</y>
+      <w>90</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>LinkedList&lt;Type&gt;
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>672</y>
+      <w>96</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Stack&lt;Type&gt;
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>606</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>636</y>
+      <w>348</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0;560.0;10.0;560.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>426</x>
+      <y>636</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>
