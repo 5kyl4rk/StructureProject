@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:StructureProject.xcodeproj">
+      location = "group:/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
