@@ -40,7 +40,8 @@
 		A65A7439220A2601000C9D97 /* node.uxf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = node.uxf; sourceTree = "<group>"; };
 		A68943DF220CCA9C008D5683 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		A69D23E22211F8D30049E25E /* Music.cp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Music.cp; sourceTree = "<group>"; };
-		A69D23E42211F8E60049E25E /* music.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = music.csv; path = ../../../Assets/music.csv; sourceTree = "<group>"; };
+		A69D23E5221209A30049E25E /* music.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = music.csv; path = ../../../Assets/music.csv; sourceTree = "<group>"; };
+		A69D23E622120E850049E25E /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		A6A7432322023311008A224E /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		A6A7432522023980008A224E /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		A6E16E8521FF8B000070F74A /* StructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +87,7 @@
 				A65A742D220A1930000C9D97 /* List.hpp */,
 				A6A7432522023980008A224E /* Array.hpp */,
 				A68943DF220CCA9C008D5683 /* LinkedList.hpp */,
+				A69D23E622120E850049E25E /* Stack.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
@@ -149,7 +151,7 @@
 		A6E16E9221FF8C1C0070F74A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A69D23E42211F8E60049E25E /* music.csv */,
+				A69D23E5221209A30049E25E /* music.csv */,
 				A69D23E22211F8D30049E25E /* Music.cp */,
 				A65A7432220A214E000C9D97 /* crime.csv */,
 				A65A7434220A214E000C9D97 /* CrimeData.cpp */,
