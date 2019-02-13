@@ -94,7 +94,7 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 }
 
 template <class Type>
-Array<Type> & Array<Type> :: operator [] (int index) const
+Type & Array<Type>:: operator [] (int index) 
 {
     assert(index >= 0 && index < size);
     return internalArray[index];
