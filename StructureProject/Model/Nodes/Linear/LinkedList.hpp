@@ -31,7 +31,7 @@ public:
     
     //Structure methods (can now be overriden)
     virtual void add(Type item);
-    virtual void addAtIndex(iint index, Type item);
+    virtual void addAtIndex(int index, Type item);
     virtual Type getFromIndex(int index);
     virtual Type remove(int index);
 //    Type setAtIndex(int index, Type item);
@@ -50,10 +50,10 @@ template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type> * destroyStructure = front;
-    while (front !- nullptr)
+    while (front != nullptr)
     {
         front = destroyStructure->getNextNode();
-        delet destroyStructure;
+        delete destroyStructure;
         destroyStructure = front;
     }
 }
@@ -97,7 +97,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
         {
             LinearNode<Type> * previous = nullptr;
             LinearNode<Type> * current = front;
-            for(int position = 0; position < index; postition++)
+            for(int position = 0; position < index; position++)
             {
                 previous = current;
                 current = current->getNextNode();
@@ -202,6 +202,7 @@ LinearNode<Type> * LinkedList<Type> :: getFront()
     return this->front;
 }
 
+template <class Type>
 int LinkedList<Type> :: getSize() const
 {
     return this->size;

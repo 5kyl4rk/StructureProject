@@ -45,7 +45,7 @@ Queue<Type> :: ~Queue()
 {
     for(LinearNode<Type> * removed = this -> front; removed !=nullptr; removed = this->front)
     {
-        this->front = removed=>getNextNode();
+        this->front = removed->getNextNode();
         delete removed;
     }
 }
@@ -113,5 +113,17 @@ void Queue<Type> :: clear()
     }
 }
 
+template <class Type>
+Type Queue<Type> :: peek()
+{
+    assert(this->size > 0);
+    return this->getFront()->getData();
+}
 
+template <class Type>
+Type Queue<Type> :: getFromIndex(int index)
+{
+    assert(index == 0);
+    return peek();
+}
 #endif /* Queue_hpp */
