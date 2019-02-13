@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6106C372214A6BE00E478DF /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		A65A7429220A1454000C9D97 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		A65A742A220A1454000C9D97 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		A65A742D220A1930000C9D97 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 				A6A7432522023980008A224E /* Array.hpp */,
 				A68943DF220CCA9C008D5683 /* LinkedList.hpp */,
 				A69D23E622120E850049E25E /* Stack.hpp */,
+				A6106C372214A6BE00E478DF /* Queue.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
