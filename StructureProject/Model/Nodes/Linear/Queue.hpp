@@ -34,4 +34,50 @@ public:
     
 };
 
+template <class Type>
+Queue<Type> :: Queue() : LinkedList<Type>
+{
+    //empty since it is handled by the parent class constructor
+}
+
+template <class Type>
+Queue<Type> :: ~Queue()
+{
+    for(LinearNode<Type> * removed = this -> front; removed !=nullptr; removed = this->front)
+    {
+        this->front = removed=>getNextNode();
+        delete removed;
+    }
+}
+
+template <class Type>
+void Queue<Type> :: enqueue(Type item)
+{
+    LinearNode<Type> *added = new LinearNode<Type>(item);
+    
+    if(this->size == 0)
+    {
+        this->front = added;
+    }
+    else
+    {
+        this->end->setNextNode(added);
+    }
+    
+    this->end = added;
+    this->size++;
+}
+
+template <class Type>
+void Queue<Type> :: addAtIndex(int index, Type item)
+{
+    assert(index == this->size);
+    enqueue(item);
+}
+
+template <class Type>
+void Queue<Type> :: add(Type item)
+{
+    enqueue(item);
+}
 #endif /* Queue_hpp */
