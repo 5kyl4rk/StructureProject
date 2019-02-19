@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>306</x>
-      <y>174</y>
+      <x>246</x>
+      <y>0</y>
       <w>138</w>
       <h>84</h>
     </coordinates>
@@ -17,14 +17,14 @@
 + Node(Type): constructor
 + getData(): Type
 + setData(Type): void
-bg=#FF3F72</panel_attributes>
+bg=#1473D4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
-      <y>318</y>
+      <x>324</x>
+      <y>144</y>
       <w>288</w>
       <h>96</h>
     </coordinates>
@@ -37,14 +37,14 @@ bg=#FF3F72</panel_attributes>
 + LinearNode&lt;Type&gt;(Type, LinearNode&lt;Type&gt;*) : constructor
 + getNext() : LinearNode&lt;Type&gt; *
 setNext(LinearNode&lt;Type&gt; *) : void
-bg=#3FFCD</panel_attributes>
+bg=#00BCFF</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>384</x>
-      <y>252</y>
+      <x>324</x>
+      <y>78</y>
       <w>72</w>
       <h>78</h>
     </coordinates>
@@ -54,8 +54,8 @@ bg=#3FFCD</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>258</y>
+      <x>0</x>
+      <y>84</y>
       <w>204</w>
       <h>132</h>
     </coordinates>
@@ -77,8 +77,8 @@ bg=#F5FF00</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>408</y>
+      <x>420</x>
+      <y>234</y>
       <w>162</w>
       <h>84</h>
     </coordinates>
@@ -89,8 +89,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
-      <y>480</y>
+      <x>324</x>
+      <y>306</y>
       <w>180</w>
       <h>132</h>
     </coordinates>
@@ -107,82 +107,238 @@ m1=0..n</panel_attributes>
 /getSize() : int/
 /getFront() : LinearNode&lt;Type&gt; */
 /getEnd() : LinearNode&lt;Type&gt; */
+bg=#6FFCD0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>606</y>
+      <w>174</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Queue&lt;Type&gt;
+--
++ Queue() : constructor
+- ~Queue(): destructor
+--
+*Queue Methods*
++ enqueue(Type): void
++ dequeue(): Type
++ peek(): Type
+
+*List Structure Methods*
++ getFromIndex(int): Type
++ add(Type): void
++ addAtIndex(int, Type): void
++ remove(int): Type
++ contains(Type): bool
+
+*List Accessors*
++ getSize(): int
++ getFront(): LinearNode&lt;Type&gt; *
++ getEnd(): LinearNode&lt;Type&gt; *
+bg=#14C742</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>606</y>
+      <w>162</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Stack&lt;Type&gt;
+--
++Stack() : constructor
++ ~Stack() : destructor
+--
+
+*Stack Methods*
++ push(Type): void
++ pop(): Type
++ peek(): Type
+
+*List Structure Methods*
++ getFromIndex(int): Type
++ add(Type): void
++ addAtIndex(int, Type): void
++ remove(int): Type
++ contains(Type): bool
+
+*List Accessors*
++ getSize(): int
++ getFront(): LinearNode&lt;Type&gt; *
++ getEnd(): LinearNode&lt;Type&gt; *
+bg=#42C714</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>522</y>
+      <w>120</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>570</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>636</x>
+      <y>420</y>
+      <w>180</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>LinkedList&lt;Type&gt;
+--
+- front: LinearNode&lt;Type&gt; *
+- end: LinearNode&lt;Type&gt; *
+--
++ LinkedList(): constructor
++ ~LinkedList(): destructor
+*List Structure methods*
++ getFromIndex(int) : Type
++ add(Type): void
++ addAtIndex(int, Type) : void
++ remove(int) : Type
+*List Accessors*
++ getSize() : int/
++ getFront() : LinearNode&lt;Type&gt; *
++ getEnd() : LinearNode&lt;Type&gt; *
 bg=#6FFC86</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>390</x>
-      <y>672</y>
-      <w>102</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>Queue&lt;Type&gt;
---
-
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>240</x>
-      <y>678</y>
-      <w>90</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>LinkedList&lt;Type&gt;
---
-
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>546</x>
-      <y>672</y>
-      <w>96</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>Stack&lt;Type&gt;
---
-
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>444</x>
-      <y>606</y>
-      <w>18</w>
-      <h>48</h>
+      <x>498</x>
+      <y>402</y>
+      <w>150</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;140.0;230.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>636</y>
-      <w>348</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0;560.0;10.0;560.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>426</x>
-      <y>636</y>
-      <w>18</w>
+      <x>372</x>
+      <y>570</y>
+      <w>264</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;420.0;10.0;420.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>738</y>
+      <w>132</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>GraphTester
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>912</x>
+      <y>570</y>
+      <w>132</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>LinearTester
+--
++ testVsSTL(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>942</x>
+      <y>912</y>
+      <w>132</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>TreeTester
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>828</y>
+      <w>138</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>AlgorithmTester
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>738</y>
+      <w>138</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>HashTableTester
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>576</y>
+      <w>462</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>750.0;20.0;480.0;20.0;90.0;20.0;90.0;90.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>492</y>
+      <w>60</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>582</y>
+      <w>174</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;180.0;270.0;180.0;270.0;10.0</additional_attributes>
   </element>
 </diagram>
