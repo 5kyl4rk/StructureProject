@@ -36,7 +36,7 @@ void Controller :: usingNodes()
 
 void Controller :: testFiles()
 {
-    vector<Music> musicReport = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
+    vector<Music> musicReport = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/Assets/music.csv");
     vector<CrimeData> crimeReport = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
     
     cout << "[Music]" << endl;

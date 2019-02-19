@@ -117,7 +117,7 @@ LinkedList<CrimeData> FileController :: readDataToList(string filename)
         cerr << "NO FILE" << endl;
     }
     
-    return crimes
+    return crimes;
 }
 
 LinkedList<Music> FileController :: musicDataToList(string filename)

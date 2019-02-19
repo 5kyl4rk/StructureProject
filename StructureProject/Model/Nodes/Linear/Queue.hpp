@@ -36,7 +36,7 @@ public:
 };
 
 template <class Type>
-Queue<Type> :: Queue() : LinkedList<Type>
+Queue<Type> :: Queue() : LinkedList<Type>()
 {
     //empty since it is handled by the parent class constructor
 }
