@@ -171,5 +171,5 @@ int Music :: getYear() const{   return  year; }
 
 ostream & operator << (ostream &outputStream, const Music & outputData)
 {
-    return outputStream << outputData.getSong_id() << " is the song " << outputData.getArtist_id() << " is the artist from " << outputData.getYear() << endl;;
+    return outputStream << outputData.getTitle() << " is the song " << outputData.getArtist_name() << " is the artist from " << outputData.getYear() << endl;;
 }
