@@ -20,6 +20,7 @@ private:
 public:
     Timer();
     void startTimer();
+    void resetTimer();
     void stopTimer();
     void displayInformation();
     long getTimeInMicroseconds();

@@ -20,11 +20,13 @@ void LinearTester :: testVsSTL()
     LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
     crimeTimerOOP.stopTimer();
     
+    cout << "---[Crime Data]---" << endl;
     cout << "This is the STL Read time: " << endl;
     crimeTimerSTL.displayInformation();
     cout << "This is the OOP Node Read time: " << endl;
     crimeTimerOOP.displayInformation();
     cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
     
     musicSTL.startTimer();
     vector<CrimeData> tunez = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
@@ -34,11 +36,12 @@ void LinearTester :: testVsSTL()
     LinkedList<CrimeData> musicList = FileController :: readDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
     crimeTimerOOP.stopTimer();
     
+    cout << "---[Music]---" <<endl;
     cout << "This is the STL Read time: " << endl;
     crimeTimerSTL.displayInformation();
     cout << "This is the OOP Node Read time: " << endl;
     crimeTimerOOP.displayInformation();
     cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds" << endl;
-    
+    cout << endl;
     
 }

@@ -15,12 +15,13 @@ Controller :: Controller()
 
 void Controller :: start()
 {
-    stopwatch.startTimer();
+    //stopwatch.startTimer();
     cout << "Let's do something I guess ._." << endl;
-    this->usingNodes();
-    this->testFiles();
-    stopwatch.stopTimer();
-    stopwatch.displayInformation();
+    testLinear();
+    //usingNodes();
+    //testFiles();
+    //stopwatch.stopTimer();
+    //stopwatch.displayInformation();
 }
 
 void Controller :: usingNodes()
@@ -50,4 +51,10 @@ void Controller :: testFiles()
         cout << index << ": contents are: " << crimeReport[index] << endl;
     }
     
+}
+
+void Controller :: testLinear()
+{
+    LinearTester porygon;
+    porygon.testVsSTL();
 }

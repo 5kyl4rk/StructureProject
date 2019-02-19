@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StructureProject/Model/Nodes/Linear/Queue.hpp"
-            timestampString = "572298821.545875"
+            timestampString = "572301306.540786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StructureProject/Controller/Controller.hpp"
-            timestampString = "572298821.54594"
+            timestampString = "572301306.5408469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "Controller"
             landmarkType = "3">
          </BreakpointContent>

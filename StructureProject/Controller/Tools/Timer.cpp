@@ -20,6 +20,11 @@ void Timer :: startTimer()
     executionTime = clock();
 }
 
+void Timer :: resetTimer()
+{
+    executionTime = 0;
+}
+
 void Timer :: stopTimer()
 {
     assert(executionTime != 0);
