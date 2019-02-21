@@ -21,11 +21,11 @@ public:
     DoubleNode(Type data);
     DoubleNode(Type data, DoubleNode<Type> * previous, DoubleNode<Type> * next);
     
-    DoubleNode<Type> * getPrevious();
-    DoubleNode<Type> * getNext();
+    DoubleNode<Type> * getPreviousNode();
+    DoubleNode<Type> * getNextNode();
     
-    void setPrevious(DoubleNode<Type> * previous);
-    void setNext(DoubleNode<Type> * next);
+    void setPreviousNode(DoubleNode<Type> * previous);
+    void setNextNode(DoubleNode<Type> * next);
 };
 
 template <class Type>
@@ -50,25 +50,25 @@ DoubleNode<Type> :: DoubleNode(Type data, DoubleNode<Type> * previous, DoubleNod
 }
 
 template <class Type>
-void DoubleNode<Type> :: setNext(DoubleNode<Type> * next)
+void DoubleNode<Type> :: setNextNode(DoubleNode<Type> * next)
 {
     this->next = next;
 }
 
 template <class Type>
-DoubleNode<Type> :: setPrevious(DoubleNode<Type> * previous)
+DoubleNode<Type> :: setPreviousNode(DoubleNode<Type> * previous)
 {
     this->previous = previous;
 }
 
 template <class Type>
-DoubleNode<Type> * DoubleNode<Type> :: getNext()
+DoubleNode<Type> * DoubleNode<Type> :: getNextNode()
 {
     return next;
 }
 
 template <class Type>
-DoubleNode<Type> * DoubleNode<Type> :: getPrevious()
+DoubleNode<Type> * DoubleNode<Type> :: getPreviousNode()
 {
     return previous;
 }
