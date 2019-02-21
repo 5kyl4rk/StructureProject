@@ -54,6 +54,7 @@
 		A6E16E9821FF8C9D0070F74A /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		A6E16E9A21FF915F0070F74A /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		A6E7E581221F281C00475084 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
+		A6E7E582221F2F6E00475084 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 				A68943DF220CCA9C008D5683 /* LinkedList.hpp */,
 				A69D23E622120E850049E25E /* Stack.hpp */,
 				A6106C372214A6BE00E478DF /* Queue.hpp */,
+				A6E7E582221F2F6E00475084 /* CircularList.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
