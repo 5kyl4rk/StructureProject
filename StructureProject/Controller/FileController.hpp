@@ -13,6 +13,8 @@
 #include "../Resources/Music.hpp"
 #include "../Model/Nodes/Linear/Array.hpp"
 #include "../Model/Nodes/Linear/LinkedList.hpp"
+#include "../Model/Nodes/Linear/Stack.hpp"
+#include "../Model/Nodes/Linear/Queue.hpp"
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -33,6 +35,7 @@ public:
     static LinkedList<CrimeData> readDataToList(string filename);
     static LinkedList<Music> musicDataToList(string filename);
     
+    static Queue<CrimeData> crimeVectorToQueue(vector<CrimeData> dataList);
     
 };
 

@@ -56,5 +56,6 @@ void Controller :: testFiles()
 void Controller :: testLinear()
 {
     LinearTester porygon;
+    cout <<"===STL===" <<endl;
     porygon.testVsSTL();
 }
