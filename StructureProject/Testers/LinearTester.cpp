@@ -30,11 +30,11 @@ void LinearTester :: testVsSTL()
     cout << endl;
     
     musicSTL.startTimer();
-    vector<CrimeData> tunez = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    vector<Music> tunez = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
     musicSTL.stopTimer();
     
     musicOOP.startTimer();
-    LinkedList<CrimeData> musicList = FileController :: readDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    LinkedList<Music> musicList = FileController :: musicDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
     musicOOP.stopTimer();
     
     cout << "---[Music]---" <<endl;
@@ -91,6 +91,84 @@ void LinearTester :: testVsSTL()
 
 void LinearTester :: testVsStack()
 {
+    //MARK: Time Stack
+    Timer crimeTimerStack, crimeTimerOOP, musicStack, musicOOP;
+    
+    crimeTimerStack.startTimer();
+    vector<CrimeData> crimes = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    Stack<CrimeData> stackOfCrimes = FileController :: crimeVectorToStack(crimes);
+    crimeTimerStack.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    crimeTimerOOP.stopTimer();
+    
+    cout << "---[Crime Data]---" << endl;
+    cout << "This is the Stack Read time: " << endl;
+    crimeTimerStack.displayInformation();
+    cout << "This is the OOP Node Read time: " << endl;
+    crimeTimerOOP.displayInformation();
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerStack.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    musicStack.startTimer();
+    vector<Music> tunez = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
+    Stack<Music> stackOfMusic = FileController :: musicVectorToStack(tunez);
+    musicStack.stopTimer();
+    
+    musicOOP.startTimer();
+    LinkedList<Music> musicList = FileController :: musicDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
+    musicOOP.stopTimer();
+    
+    cout << "---[Music]---" <<endl;
+    cout << "This is the Stack Read time: " << endl;
+    musicStack.displayInformation();
+    cout << "This is the OOP Node Read time: " << endl;
+    musicOOP.displayInformation();
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicStack.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    crimeTimerOOP.resetTimer();
+    crimeTimerStack.resetTimer();
+    musicOOP.resetTimer();
+    musicStack.resetTimer();
+    
+    //MARK: Random Retrieval STL
+    int randomIndex = rand() % moreCrimes.getSize();
+    
+    crimeTimerStack.startTimer();
+    crimes[randomIndex];
+    crimeTimerStack.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    moreCrimes.getFromIndex(randomIndex);
+    crimeTimerOOP.stopTimer();
+    
+    cout << "---[Crime Data]---"<<endl;
+    cout << "This is the STL random retrieval: "<< endl;
+    crimeTimerStack.displayInformation();
+    cout << "This is the OOP Node random retrieval: " << endl;
+    crimeTimerOOP.displayInformation();
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerStack.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    randomIndex = rand() % musicList.getSize();
+    
+    musicStack.startTimer();
+    tunez[randomIndex];
+    musicStack.stopTimer();
+    
+    musicOOP.startTimer();
+    musicList.getFromIndex(randomIndex);
+    musicOOP.stopTimer();
+    
+    cout << "---[Music]---"<<endl;
+    cout << "This is the STL random retrieval: "<< endl;
+    musicStack.displayInformation();
+    cout << "This is the OOP Node random retrieval: " << endl;
+    musicOOP.displayInformation();
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicStack.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
     
 }
 
