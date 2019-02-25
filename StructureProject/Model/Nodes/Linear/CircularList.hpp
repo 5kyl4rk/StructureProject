@@ -12,7 +12,7 @@
 #include "../DoubleNode.hpp"
 
 template <class Type>
-class CircularList
+class CircularList : public List<Type>
 {
 private:
     DoubleNode<Type> * front;

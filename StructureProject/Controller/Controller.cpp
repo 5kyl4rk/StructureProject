@@ -58,4 +58,8 @@ void Controller :: testLinear()
     LinearTester porygon;
     cout <<"===STL===" <<endl;
     porygon.testVsSTL();
+    cout <<"===Stack==="<<endl;
+    porygon.testVsStack();
+    cout<<"===Queue==="<<endl;
+    porygon.testVsQueue();
 }

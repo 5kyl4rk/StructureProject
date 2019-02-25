@@ -11,6 +11,7 @@
 void LinearTester :: testVsSTL()
 {
     //MARK: Time STL
+    cout << "<BUILD>" << endl;
     Timer crimeTimerSTL, crimeTimerOOP, musicSTL, musicOOP;
     
     crimeTimerSTL.startTimer();
@@ -51,6 +52,7 @@ void LinearTester :: testVsSTL()
     musicSTL.resetTimer();
     
     //MARK: Random Retrieval STL
+    cout << "<RETRIEVAL>" << endl;
     int randomIndex = rand() % moreCrimes.getSize();
     
     crimeTimerSTL.startTimer();
@@ -92,6 +94,7 @@ void LinearTester :: testVsSTL()
 void LinearTester :: testVsStack()
 {
     //MARK: Time Stack
+    cout << "<BUILD>" << endl;
     Timer crimeTimerStack, crimeTimerOOP, musicStack, musicOOP;
     
     crimeTimerStack.startTimer();
@@ -133,8 +136,9 @@ void LinearTester :: testVsStack()
     musicOOP.resetTimer();
     musicStack.resetTimer();
     
-    //MARK: Random Retrieval STL
-    int randomIndex = rand() % moreCrimes.getSize();
+    //MARK: Random Retrieval Stack
+    cout << "<RETRIEVAL>" << endl;
+    int randomIndex = rand() % stackOfCrimes.getSize();
     
     crimeTimerStack.startTimer();
     crimes[randomIndex];
@@ -145,14 +149,14 @@ void LinearTester :: testVsStack()
     crimeTimerOOP.stopTimer();
     
     cout << "---[Crime Data]---"<<endl;
-    cout << "This is the STL random retrieval: "<< endl;
+    cout << "This is the Stack random retrieval: "<< endl;
     crimeTimerStack.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     crimeTimerOOP.displayInformation();
     cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerStack.getTimeInMicroseconds() << " microseconds" << endl;
     cout << endl;
     
-    randomIndex = rand() % musicList.getSize();
+    randomIndex = rand() % stackOfMusic.getSize();
     
     musicStack.startTimer();
     tunez[randomIndex];
@@ -174,6 +178,86 @@ void LinearTester :: testVsStack()
 
 void LinearTester :: testVsQueue()
 {
+    //MARK: Time Queue
+    cout << "<BUILD>" << endl;
+    Timer crimeTimerQ, crimeTimerOOP, musicQ, musicOOP;
+    
+    crimeTimerQ.startTimer();
+    vector<CrimeData> crimes = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    Queue  <CrimeData> queueOfCrimes = FileController :: crimeVectorToQueue(crimes);
+    crimeTimerQ.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    crimeTimerOOP.stopTimer();
+    
+    cout << "---[Crime Data]---" << endl;
+    cout << "This is the Stack Read time: " << endl;
+    crimeTimerQ.displayInformation();
+    cout << "This is the OOP Node Read time: " << endl;
+    crimeTimerOOP.displayInformation();
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerQ.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    musicQ.startTimer();
+    vector<Music> tunez = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
+    Queue<Music> queueOfMusic = FileController :: musicVectorToQueue(tunez);
+    musicQ.stopTimer();
+    
+    musicOOP.startTimer();
+    LinkedList<Music> musicList = FileController :: musicDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
+    musicOOP.stopTimer();
+    
+    cout << "---[Music]---" <<endl;
+    cout << "This is the Stack Read time: " << endl;
+    musicQ.displayInformation();
+    cout << "This is the OOP Node Read time: " << endl;
+    musicOOP.displayInformation();
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicQ.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    crimeTimerOOP.resetTimer();
+    crimeTimerQ.resetTimer();
+    musicOOP.resetTimer();
+    musicQ.resetTimer();
+    
+    //MARK: Random Retrieval Queue
+    cout << "<RETRIEVAL>" << endl;
+    int randomIndex = rand() % queueOfCrimes.getSize();
+    
+    crimeTimerQ.startTimer();
+    crimes[randomIndex];
+    crimeTimerQ.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    moreCrimes.getFromIndex(randomIndex);
+    crimeTimerOOP.stopTimer();
+    
+    cout << "---[Crime Data]---"<<endl;
+    cout << "This is the Stack random retrieval: "<< endl;
+    crimeTimerQ.displayInformation();
+    cout << "This is the OOP Node random retrieval: " << endl;
+    crimeTimerOOP.displayInformation();
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerQ.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    randomIndex = rand() % queueOfMusic.getSize();
+    
+    musicQ.startTimer();
+    tunez[randomIndex];
+    musicQ.stopTimer();
+    
+    musicOOP.startTimer();
+    musicList.getFromIndex(randomIndex);
+    musicOOP.stopTimer();
+    
+    cout << "---[Music]---"<<endl;
+    cout << "This is the STL random retrieval: "<< endl;
+    musicQ.displayInformation();
+    cout << "This is the OOP Node random retrieval: " << endl;
+    musicOOP.displayInformation();
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicQ.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
     
 }
 
