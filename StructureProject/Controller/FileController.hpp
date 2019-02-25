@@ -35,7 +35,11 @@ public:
     static LinkedList<CrimeData> readDataToList(string filename);
     static LinkedList<Music> musicDataToList(string filename);
     
+    static Stack<CrimeData> crimeVectorToStack(vector<CrimeData> dataList);
+    static Stack<Music> musicVectorToStack(vector<Music> dataList);
+    
     static Queue<CrimeData> crimeVectorToQueue(vector<CrimeData> dataList);
+    static Queue<Music> musicVectorToQueue(vector<Music> dataList);
     
 };
 

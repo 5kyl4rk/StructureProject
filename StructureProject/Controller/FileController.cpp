@@ -155,3 +155,51 @@ LinkedList<Music> FileController :: musicDataToList(string filename)
     
     return musicList;
 }
+
+Stack<CrimeData> FileController :: crimeVectorToStack(vector<CrimeData> dataList)
+{
+    Stack<CrimeData> crimeStack;
+    
+    for(int cycles = 0; cycles < 10; cycles++)
+    {
+        crimeStack.push(dataList[cycles]);
+    }
+    
+    return crimeStack;
+}
+
+Stack<Music> FileController :: musicVectorToStack(vector<Music> dataList)
+{
+    Stack<Music> musicStack;
+    
+    for(int cycles = 0; cycles < 10; cycles++)
+    {
+        musicStack.push(dataList[cycles]);
+    }
+    
+    return musicStack;
+}
+
+Queue<CrimeData> FileController :: crimeVectorToQueue(vector<CrimeData> dataList)
+{
+    Queue<CrimeData> crimeQueue;
+    
+    for(int cycles = 0; cycles < 10; cycles++)
+    {
+        crimeQueue.enqueue(dataList[cycles]);
+    }
+    
+    return crimeQueue;
+}
+
+Queue<Music> FileController :: musicVectorToQueue(vector<Music> dataList)
+{
+    Queue<Music> musicQueue;
+    
+    for(int cycles = 0; cycles < 10; cycles++)
+    {
+        musicQueue.enqueue(dataList[cycles]);
+    }
+    
+    return musicQueue;
+}

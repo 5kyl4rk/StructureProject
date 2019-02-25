@@ -14,6 +14,7 @@
 template <class Type>
 class Stack : public LinkedList<Type>
 {
+public:
     Stack();
     ~Stack();
     
