@@ -62,4 +62,6 @@ void Controller :: testLinear()
     porygon.testVsStack();
     cout<<"===Queue==="<<endl;
     porygon.testVsQueue();
+    cout<<"===Double/Circular==="<<endl;
+    porygon.testVsDouble();
 }
