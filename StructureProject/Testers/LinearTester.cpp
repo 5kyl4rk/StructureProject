@@ -99,7 +99,7 @@ void LinearTester :: testVsStack()
     
     crimeTimerStack.startTimer();
     vector<CrimeData> crimes = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
-    Stack<CrimeData> stackOfCrimes = FileController :: crimeVectorToStack(crimes);
+    Stack<CrimeData> stackOfCrimes = FileController :: crimeVectorToStack(crimes, 10);
     crimeTimerStack.stopTimer();
     
     crimeTimerOOP.startTimer();
@@ -116,7 +116,7 @@ void LinearTester :: testVsStack()
     
     musicStack.startTimer();
     vector<Music> tunez = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
-    Stack<Music> stackOfMusic = FileController :: musicVectorToStack(tunez);
+    Stack<Music> stackOfMusic = FileController :: musicVectorToStack(tunez, 10);
     musicStack.stopTimer();
     
     musicOOP.startTimer();
@@ -167,7 +167,7 @@ void LinearTester :: testVsStack()
     musicOOP.stopTimer();
     
     cout << "---[Music]---"<<endl;
-    cout << "This is the STL random retrieval: "<< endl;
+    cout << "This is the Stack random retrieval: "<< endl;
     musicStack.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     musicOOP.displayInformation();
@@ -184,7 +184,7 @@ void LinearTester :: testVsQueue()
     
     crimeTimerQ.startTimer();
     vector<CrimeData> crimes = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
-    Queue  <CrimeData> queueOfCrimes = FileController :: crimeVectorToQueue(crimes);
+    Queue  <CrimeData> queueOfCrimes = FileController :: crimeVectorToQueue(crimes, 10);
     crimeTimerQ.stopTimer();
     
     crimeTimerOOP.startTimer();
@@ -192,7 +192,7 @@ void LinearTester :: testVsQueue()
     crimeTimerOOP.stopTimer();
     
     cout << "---[Crime Data]---" << endl;
-    cout << "This is the Stack Read time: " << endl;
+    cout << "This is the Queue Read time: " << endl;
     crimeTimerQ.displayInformation();
     cout << "This is the OOP Node Read time: " << endl;
     crimeTimerOOP.displayInformation();
@@ -201,7 +201,7 @@ void LinearTester :: testVsQueue()
     
     musicQ.startTimer();
     vector<Music> tunez = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
-    Queue<Music> queueOfMusic = FileController :: musicVectorToQueue(tunez);
+    Queue<Music> queueOfMusic = FileController :: musicVectorToQueue(tunez, 10);
     musicQ.stopTimer();
     
     musicOOP.startTimer();
@@ -209,7 +209,7 @@ void LinearTester :: testVsQueue()
     musicOOP.stopTimer();
     
     cout << "---[Music]---" <<endl;
-    cout << "This is the Stack Read time: " << endl;
+    cout << "This is the Queue Read time: " << endl;
     musicQ.displayInformation();
     cout << "This is the OOP Node Read time: " << endl;
     musicOOP.displayInformation();
@@ -234,7 +234,7 @@ void LinearTester :: testVsQueue()
     crimeTimerOOP.stopTimer();
     
     cout << "---[Crime Data]---"<<endl;
-    cout << "This is the Stack random retrieval: "<< endl;
+    cout << "This is the Queue random retrieval: "<< endl;
     crimeTimerQ.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     crimeTimerOOP.displayInformation();
@@ -252,7 +252,7 @@ void LinearTester :: testVsQueue()
     musicOOP.stopTimer();
     
     cout << "---[Music]---"<<endl;
-    cout << "This is the STL random retrieval: "<< endl;
+    cout << "This is the Queue random retrieval: "<< endl;
     musicQ.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     musicOOP.displayInformation();
@@ -263,5 +263,84 @@ void LinearTester :: testVsQueue()
 
 void LinearTester :: testVsDouble()
 {
+    //MARK: Time Double
+    cout << "<BUILD>" << endl;
+    Timer crimeTimerDD, crimeTimerOOP, musicDD, musicOOP;
     
+    crimeTimerDD.startTimer();
+    vector<CrimeData> crimes = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    Queue  <CrimeData> queueOfCrimes = FileController :: crimeVectorToQueue(crimes, 10);
+    crimeTimerDD.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
+    crimeTimerOOP.stopTimer();
+    
+    cout << "---[Crime Data]---" << endl;
+    cout << "This is the Stack Read time: " << endl;
+    crimeTimerDD.displayInformation();
+    cout << "This is the OOP Node Read time: " << endl;
+    crimeTimerOOP.displayInformation();
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerDD.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    musicDD.startTimer();
+    vector<Music> tunez = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
+    Queue<Music> queueOfMusic = FileController :: musicVectorToQueue(tunez,10);
+    musicDD.stopTimer();
+    
+    musicOOP.startTimer();
+    LinkedList<Music> musicList = FileController :: musicDataToList("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
+    musicOOP.stopTimer();
+    
+    cout << "---[Music]---" <<endl;
+    cout << "This is the Stack Read time: " << endl;
+    musicDD.displayInformation();
+    cout << "This is the OOP Node Read time: " << endl;
+    musicOOP.displayInformation();
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicDD.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    crimeTimerOOP.resetTimer();
+    crimeTimerDD.resetTimer();
+    musicOOP.resetTimer();
+    musicDD.resetTimer();
+    
+    //MARK: Random Retrieval Double
+    cout << "<RETRIEVAL>" << endl;
+    int randomIndex = rand() % queueOfCrimes.getSize();
+    
+    crimeTimerDD.startTimer();
+    crimes[randomIndex];
+    crimeTimerDD.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    moreCrimes.getFromIndex(randomIndex);
+    crimeTimerOOP.stopTimer();
+    
+    cout << "---[Crime Data]---"<<endl;
+    cout << "This is the Stack random retrieval: "<< endl;
+    crimeTimerDD.displayInformation();
+    cout << "This is the OOP Node random retrieval: " << endl;
+    crimeTimerOOP.displayInformation();
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerDD.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
+    
+    randomIndex = rand() % queueOfMusic.getSize();
+    
+    musicDD.startTimer();
+    tunez[randomIndex];
+    musicDD.stopTimer();
+    
+    musicOOP.startTimer();
+    musicList.getFromIndex(randomIndex);
+    musicOOP.stopTimer();
+    
+    cout << "---[Music]---"<<endl;
+    cout << "This is the Stack random retrieval: "<< endl;
+    musicDD.displayInformation();
+    cout << "This is the OOP Node random retrieval: " << endl;
+    musicOOP.displayInformation();
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicDD.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << endl;
 }

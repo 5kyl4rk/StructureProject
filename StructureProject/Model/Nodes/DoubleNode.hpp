@@ -11,10 +11,10 @@
 #define DoubleNode_h
 
 template <class Type>
-class DoubleNode : public Node<Typ>
+class DoubleNode : public Node<Type>
 {
 protected:
-    DoubleNode<Type> * previous
+    DoubleNode<Type> * previous;
     DoubleNode<Type> * next;
 public:
     DoubleNode();
@@ -56,7 +56,7 @@ void DoubleNode<Type> :: setNextNode(DoubleNode<Type> * next)
 }
 
 template <class Type>
-DoubleNode<Type> :: setPreviousNode(DoubleNode<Type> * previous)
+void DoubleNode<Type> :: setPreviousNode(DoubleNode<Type> * previous)
 {
     this->previous = previous;
 }

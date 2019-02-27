@@ -12,7 +12,7 @@
 #include "../DoubleNode.hpp"
 
 template <class Type>
-class CircularList : public List<Type>
+class CircularList
 {
 private:
     DoubleNode<Type> * front;
@@ -87,13 +87,15 @@ void CircularList<Type> :: add(Type item)
     {
         addedNode = new DoubleNode<Type>(item);
         this->front = addedNode;
+        this->end = addedNode;
+        this->end->setNextNode(addedNode);
     }
     else
     {
         addedNode = new DoubleNode<Type>(item, this->end, this->front);
+        this->end->setNextNode(addedNode);
     }
     
-    this->end->setNextNode(addedNode);
     this->front->setPreviousNode(addedNode);
     this->end = addedNode;
     this->size++;
@@ -155,7 +157,7 @@ Type CircularList<Type> :: remove(int index)
     if(index == 0)
     {
         this->front = removedNext;
-        this->end->setNextNod(removedNext);
+        this->end->setNextNode(removedNext);
     }
     if(index == this->size -1)
     {
@@ -187,4 +189,5 @@ int CircularList<Type> :: getSize() const
 {
     return this->size;
 }
+
 #endif /* CircularList_h */

@@ -15,6 +15,7 @@
 #include "../Model/Nodes/Linear/LinkedList.hpp"
 #include "../Model/Nodes/Linear/Stack.hpp"
 #include "../Model/Nodes/Linear/Queue.hpp"
+#include "../Model/Nodes/Linear/CircularList.hpp"
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -35,11 +36,14 @@ public:
     static LinkedList<CrimeData> readDataToList(string filename);
     static LinkedList<Music> musicDataToList(string filename);
     
-    static Stack<CrimeData> crimeVectorToStack(vector<CrimeData> dataList);
-    static Stack<Music> musicVectorToStack(vector<Music> dataList);
+    static Stack<CrimeData> crimeVectorToStack(vector<CrimeData> dataList, int size);
+    static Stack<Music> musicVectorToStack(vector<Music> dataList, int size);
     
-    static Queue<CrimeData> crimeVectorToQueue(vector<CrimeData> dataList);
-    static Queue<Music> musicVectorToQueue(vector<Music> dataList);
+    static Queue<CrimeData> crimeVectorToQueue(vector<CrimeData> dataList, int size);
+    static Queue<Music> musicVectorToQueue(vector<Music> dataList, int size);
+    
+    static CircularList<CrimeData> crimeVectorToCircular(vector<CrimeData> dataList, int size);
+    static CircularList<Music> musicVectorToCircular(vector<Music> dataList, int size);
     
 };
 

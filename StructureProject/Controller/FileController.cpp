@@ -156,11 +156,11 @@ LinkedList<Music> FileController :: musicDataToList(string filename)
     return musicList;
 }
 
-Stack<CrimeData> FileController :: crimeVectorToStack(vector<CrimeData> dataList)
+Stack<CrimeData> FileController :: crimeVectorToStack(vector<CrimeData> dataList , int size)
 {
     Stack<CrimeData> crimeStack;
     
-    for(int cycles = 0; cycles < 10; cycles++)
+    for(int cycles = 0; cycles < size; cycles++)
     {
         crimeStack.push(dataList[cycles]);
     }
@@ -168,11 +168,11 @@ Stack<CrimeData> FileController :: crimeVectorToStack(vector<CrimeData> dataList
     return crimeStack;
 }
 
-Stack<Music> FileController :: musicVectorToStack(vector<Music> dataList)
+Stack<Music> FileController :: musicVectorToStack(vector<Music> dataList, int size)
 {
     Stack<Music> musicStack;
     
-    for(int cycles = 0; cycles < 10; cycles++)
+    for(int cycles = 0; cycles < size; cycles++)
     {
         musicStack.push(dataList[cycles]);
     }
@@ -180,11 +180,11 @@ Stack<Music> FileController :: musicVectorToStack(vector<Music> dataList)
     return musicStack;
 }
 
-Queue<CrimeData> FileController :: crimeVectorToQueue(vector<CrimeData> dataList)
+Queue<CrimeData> FileController :: crimeVectorToQueue(vector<CrimeData> dataList, int size)
 {
     Queue<CrimeData> crimeQueue;
     
-    for(int cycles = 0; cycles < 10; cycles++)
+    for(int cycles = 0; cycles < size; cycles++)
     {
         crimeQueue.enqueue(dataList[cycles]);
     }
@@ -192,14 +192,21 @@ Queue<CrimeData> FileController :: crimeVectorToQueue(vector<CrimeData> dataList
     return crimeQueue;
 }
 
-Queue<Music> FileController :: musicVectorToQueue(vector<Music> dataList)
+Queue<Music> FileController :: musicVectorToQueue(vector<Music> dataList, int size)
 {
     Queue<Music> musicQueue;
     
-    for(int cycles = 0; cycles < 10; cycles++)
+    for(int cycles = 0; cycles < size; cycles++)
     {
         musicQueue.enqueue(dataList[cycles]);
     }
     
     return musicQueue;
+}
+
+CircularList<CrimeData> FileController :: crimeVectorToCircular(vector<CrimeData> dataList, int size)
+{
+    CircularList<CrimeData> crimeCircle;
+    
+    
 }
