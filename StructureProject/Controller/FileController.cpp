@@ -208,5 +208,22 @@ CircularList<CrimeData> FileController :: crimeVectorToCircular(vector<CrimeData
 {
     CircularList<CrimeData> crimeCircle;
     
+    for(int cycles = 0; cycles < size; cycles++)
+    {
+        crimeCircle.add(dataList[cycles]);
+    }
     
+    return crimeCircle;
+}
+
+CircularList<Music> FileController :: musicVectorToCircular(vector<Music> dataList, int size)
+{
+    CircularList<Music> musicCircle;
+    
+    for(int cycles = 0; cycles < size; cycles++)
+    {
+        musicCircle.add(dataList[cycles]);
+    }
+    
+    return musicCircle;
 }

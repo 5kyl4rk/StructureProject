@@ -269,7 +269,7 @@ void LinearTester :: testVsDouble()
     
     crimeTimerDD.startTimer();
     vector<CrimeData> crimes = FileController :: readCrimeDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/crime.csv");
-    Queue  <CrimeData> queueOfCrimes = FileController :: crimeVectorToQueue(crimes, 10);
+    CircularList<CrimeData> circleOfCrimes = FileController :: crimeVectorToCircular(crimes, 10);
     crimeTimerDD.stopTimer();
     
     crimeTimerOOP.startTimer();
@@ -277,7 +277,7 @@ void LinearTester :: testVsDouble()
     crimeTimerOOP.stopTimer();
     
     cout << "---[Crime Data]---" << endl;
-    cout << "This is the Stack Read time: " << endl;
+    cout << "This is the Circle Read time: " << endl;
     crimeTimerDD.displayInformation();
     cout << "This is the OOP Node Read time: " << endl;
     crimeTimerOOP.displayInformation();
@@ -286,7 +286,7 @@ void LinearTester :: testVsDouble()
     
     musicDD.startTimer();
     vector<Music> tunez = FileController :: musicDataToVector("/Users/sfit1864/Documents/C++ Projects/StructureProject/StructureProject/Resources/music.csv");
-    Queue<Music> queueOfMusic = FileController :: musicVectorToQueue(tunez,10);
+    CircularList<Music> circleOfMusic = FileController :: musicVectorToCircular(tunez,10);
     musicDD.stopTimer();
     
     musicOOP.startTimer();
@@ -294,7 +294,7 @@ void LinearTester :: testVsDouble()
     musicOOP.stopTimer();
     
     cout << "---[Music]---" <<endl;
-    cout << "This is the Stack Read time: " << endl;
+    cout << "This is the Circle Read time: " << endl;
     musicDD.displayInformation();
     cout << "This is the OOP Node Read time: " << endl;
     musicOOP.displayInformation();
@@ -308,7 +308,7 @@ void LinearTester :: testVsDouble()
     
     //MARK: Random Retrieval Double
     cout << "<RETRIEVAL>" << endl;
-    int randomIndex = rand() % queueOfCrimes.getSize();
+    int randomIndex = rand() % circleOfCrimes.getSize();
     
     crimeTimerDD.startTimer();
     crimes[randomIndex];
@@ -319,14 +319,14 @@ void LinearTester :: testVsDouble()
     crimeTimerOOP.stopTimer();
     
     cout << "---[Crime Data]---"<<endl;
-    cout << "This is the Stack random retrieval: "<< endl;
+    cout << "This is the Circle random retrieval: "<< endl;
     crimeTimerDD.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     crimeTimerOOP.displayInformation();
     cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerDD.getTimeInMicroseconds() << " microseconds" << endl;
     cout << endl;
     
-    randomIndex = rand() % queueOfMusic.getSize();
+    randomIndex = rand() % circleOfMusic.getSize();
     
     musicDD.startTimer();
     tunez[randomIndex];
@@ -337,7 +337,7 @@ void LinearTester :: testVsDouble()
     musicOOP.stopTimer();
     
     cout << "---[Music]---"<<endl;
-    cout << "This is the Stack random retrieval: "<< endl;
+    cout << "This is the Circle random retrieval: "<< endl;
     musicDD.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     musicOOP.displayInformation();
