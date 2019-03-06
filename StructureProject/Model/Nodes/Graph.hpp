@@ -55,4 +55,99 @@ public:
     int costTraversal(Graph<Type> & graph, int vertex);
 };
 
+template <class Type>
+const int Graph<Type> :: MAXIMUM;
+
+template <class Type>
+Graph<Type> :: Graph()
+{
+    this->vertexCount = 0;
+}
+
+//MARK: Accessors
+template <class Type>
+int Graph<Type> :: size() const
+{
+    return vertexCount;
+}
+//Left hand side operator
+template <class Type>
+Type& Graph<Type> :: operator[](int vertex)
+{
+    assert(vertex < vertexCount);
+    return graphData[vertex];
+}
+
+//Right hand side operator
+template <class Type>
+Type Graph<Type> :: operator[](int vertex) const
+{
+    assert(vertex < vertexCount);
+    return graphData[vertex];
+}
+
+//MARK: Vertices
+template <class Type>
+void Graph<Type> :: addVertex(const type& value)
+{
+    assert(vertexCount < MAXIMUM);
+    int newVertexNumber = vertexCount;
+    vertexCount++;
+    
+    for(int otherVertexNumber = 0; otherVertexNumber < vertexCount; otherVertexNumber++)
+    {
+        adjacencyMatrix[otherVertexNumber][newVertexNumber] = false;
+        adjacencyMatrix[vewVertexNumber][otherVertexNumber] = false;
+    }
+    
+    graphData[newVertexNumber] = value;
+}
+
+//MARK: Edges
+template <class Type>
+void Graph<Type> :: addEdge(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = true;
+}
+
+template <class Type>
+void Graph<Type> :: addEdgeCost(int source, int target, int cost)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && targett < vertexCount);
+    weightCostMatrix[source][target] = cost;
+    weightCostMatrix[target][source] = cost;
+}
+
+template <class Type>
+void Graph<Type> :: addEdgeUndirected(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = true;
+    adjacencyMatrix[target][source] = true;
+}
+
+template <class Type>
+void Graph<Type> :: removeEdge(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = false;
+}
+
+template <class Type>
+void Graph<Type> :: removeEdgeUndirected(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = false;
+    adjacencyMatrix[target][source] = false;
+}
+
+template <class Type>
+void Graph<Type> :: removeEdgeCost(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = 0;
+    adjacencyMatrix[target][source] = 0;
+}
+
 #endif /* Graph_h */
