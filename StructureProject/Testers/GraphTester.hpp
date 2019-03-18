@@ -9,6 +9,9 @@
 #ifndef GraphTester_h
 #define GraphTester_h
 
+#include "../Model/Nodes/Graph.hpp"
+#include <iostream>
+
 class GraphTester
 {
 private:

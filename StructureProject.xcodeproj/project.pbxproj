@@ -14,6 +14,7 @@
 		A65A7437220A214F000C9D97 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A65A7434220A214E000C9D97 /* CrimeData.cpp */; };
 		A6E16E9621FF8C560070F74A /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6E16E9521FF8C560070F74A /* Runner.cpp */; };
 		A6E16E9921FF8C9D0070F74A /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6E16E9721FF8C9D0070F74A /* Controller.cpp */; };
+		A6FEEEEB22401D7400879A7D /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6FEEEEA22401D7400879A7D /* GraphTester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		A6E7E581221F281C00475084 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
 		A6E7E582221F2F6E00475084 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularList.hpp; sourceTree = "<group>"; };
 		A6FEEEE922401C8700879A7D /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
+		A6FEEEEA22401D7400879A7D /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				A6106C392214AE9F00E478DF /* LinearTester.cpp */,
 				A6106C3A2214AE9F00E478DF /* LinearTester.hpp */,
 				A6FEEEE922401C8700879A7D /* GraphTester.hpp */,
+				A6FEEEEA22401D7400879A7D /* GraphTester.cpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65A742B220A1454000C9D97 /* Timer.cpp in Sources */,
+				A6FEEEEB22401D7400879A7D /* GraphTester.cpp in Sources */,
 				A6462824221C9098005AA112 /* Music.cpp in Sources */,
 				A65A7437220A214F000C9D97 /* CrimeData.cpp in Sources */,
 				A6E16E9621FF8C560070F74A /* Runner.cpp in Sources */,
