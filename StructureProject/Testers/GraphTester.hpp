@@ -17,7 +17,7 @@ class GraphTester
 private:
     Graph<string> puzzle;
     void setup();
-    void comparteTraversals();
+    void compareTraversals();
     void findCheapestTraversal();
 public:
     void testGraphs();

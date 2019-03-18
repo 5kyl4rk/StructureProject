@@ -236,7 +236,7 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
     
     std::fill_n(visited,currentGraph.size(),false);
     visited[vertex]= true;
-    cout << currentGraph[vertex] <<endl;
+    cout << currentGraph[vertex]<< ", " <<endl;
     vertexQueue.push(vertex);
     while(!vertexQueue.empty())
     {

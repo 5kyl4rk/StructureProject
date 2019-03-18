@@ -129,4 +129,35 @@ void GraphTester :: setup()
     
 }
 
+void GraphTester :: testGraphs()
+{
+    cout<< "<GRAPH TESTER>"<< endl;
+    setup();
+    compareTraversals();
+    findCheapestTraversal();
+}
+
+void GraphTester :: compareTraversals()
+{
+    for(int index = 0; index < puzzle.size(); index++)
+    {
+        cout<<"Depth First current index: " << index << endl;
+        puzzle.depthFirstTraversal(puzzle, index);
+        cout<<endl;
+        cout<< "Breadth First current index: " << index << endl;
+        puzzle.breadthFirstTraversal(puzzle, index);
+        cout<<endl;
+        
+    }
+}
+
+void GraphTester :: findCheapestTraversal()
+{
+    int lowestCost = INT_MAX;
+    
+    for(int index = 0; index < puzzle.size(); index++)
+    {
+    
+    }
+}
 

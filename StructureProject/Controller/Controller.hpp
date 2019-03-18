@@ -15,6 +15,7 @@
 #include "./Tools/Timer.hpp"
 #include "./FileController.hpp"
 #include "../Testers/LinearTester.hpp"
+#include "../Testers/GraphTester.hpp"
 using namespace std;
 
 class Controller
@@ -27,6 +28,7 @@ public:
     void start();
     void testFiles();
     void testLinear();
+    void testNonLinear();
 };
 
 #endif /* Controller_hpp */

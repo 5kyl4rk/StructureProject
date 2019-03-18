@@ -17,7 +17,8 @@ void Controller :: start()
 {
     //stopwatch.startTimer();
     cout << "Let's do something I guess ._." << endl;
-    testLinear();
+    testNonLinear();
+    //testLinear();
     //usingNodes();
     //testFiles();
     //stopwatch.stopTimer();
@@ -64,4 +65,10 @@ void Controller :: testLinear()
     porygon.testVsQueue();
     cout<<"===Double/Circular==="<<endl;
     porygon.testVsDouble();
+}
+
+void Controller :: testNonLinear()
+{
+    GraphTester rotom;
+    rotom.testGraphs();
 }
