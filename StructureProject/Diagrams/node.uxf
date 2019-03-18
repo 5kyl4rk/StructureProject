@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>4</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>208</x>
-      <y>96</y>
-      <w>92</w>
-      <h>56</h>
+      <x>205</x>
+      <y>90</y>
+      <w>115</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -23,10 +23,10 @@ bg=#1473D4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>192</y>
-      <w>192</w>
-      <h>64</h>
+      <x>270</x>
+      <y>210</y>
+      <w>240</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>LinearNode&lt;Type&gt;
 --
@@ -43,10 +43,10 @@ bg=#00BCFF</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>148</y>
-      <w>48</w>
-      <h>52</h>
+      <x>270</x>
+      <y>155</y>
+      <w>60</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0;100.0;60.0;100.0;110.0</additional_attributes>
@@ -54,10 +54,10 @@ bg=#00BCFF</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>44</x>
-      <y>152</y>
-      <w>136</w>
-      <h>88</h>
+      <x>0</x>
+      <y>160</y>
+      <w>170</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Array&lt;Type&gt;
 --
@@ -77,10 +77,10 @@ bg=#F5FF00</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>252</y>
-      <w>108</w>
-      <h>56</h>
+      <x>350</x>
+      <y>285</y>
+      <w>135</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=0..n</panel_attributes>
@@ -89,10 +89,10 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>300</y>
-      <w>120</w>
-      <h>88</h>
+      <x>270</x>
+      <y>345</y>
+      <w>150</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>/List&lt;Type&gt;/
 --
@@ -113,10 +113,10 @@ bg=#6FFCD0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>500</y>
-      <w>116</w>
-      <h>140</h>
+      <x>245</x>
+      <y>595</y>
+      <w>145</w>
+      <h>175</h>
     </coordinates>
     <panel_attributes>Queue&lt;Type&gt;
 --
@@ -145,10 +145,10 @@ bg=#14C742</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>404</x>
-      <y>500</y>
-      <w>108</w>
-      <h>140</h>
+      <x>450</x>
+      <y>595</y>
+      <w>135</w>
+      <h>175</h>
     </coordinates>
     <panel_attributes>Stack&lt;Type&gt;
 --
@@ -178,10 +178,10 @@ bg=#42C714</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>444</y>
-      <w>80</w>
-      <h>44</h>
+      <x>440</x>
+      <y>525</y>
+      <w>100</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>180.0;10.0;10.0;10.0;10.0;90.0</additional_attributes>
@@ -189,10 +189,10 @@ bg=#42C714</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>292</x>
-      <y>476</y>
-      <w>12</w>
-      <h>32</h>
+      <x>310</x>
+      <y>565</y>
+      <w>15</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -200,10 +200,10 @@ bg=#42C714</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>376</y>
-      <w>120</w>
-      <h>104</h>
+      <x>530</x>
+      <y>440</y>
+      <w>150</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>LinkedList&lt;Type&gt;
 --
@@ -227,10 +227,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>376</x>
-      <y>364</y>
-      <w>100</w>
-      <h>64</h>
+      <x>415</x>
+      <y>425</y>
+      <w>125</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;110.0;10.0;110.0;140.0;230.0;140.0</additional_attributes>
@@ -238,10 +238,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>292</x>
-      <y>476</y>
-      <w>176</w>
-      <h>32</h>
+      <x>310</x>
+      <y>565</y>
+      <w>220</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;420.0;10.0;420.0;60.0</additional_attributes>
@@ -249,10 +249,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>556</x>
-      <y>588</y>
-      <w>88</w>
-      <h>52</h>
+      <x>640</x>
+      <y>705</y>
+      <w>110</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>GraphTester
 --</panel_attributes>
@@ -261,10 +261,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>652</x>
-      <y>476</y>
-      <w>88</w>
-      <h>52</h>
+      <x>760</x>
+      <y>565</y>
+      <w>110</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>LinearTester
 --
@@ -274,10 +274,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>668</x>
-      <y>652</y>
-      <w>88</w>
-      <h>52</h>
+      <x>780</x>
+      <y>785</y>
+      <w>110</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>TreeTester
 --</panel_attributes>
@@ -286,10 +286,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>556</x>
-      <y>648</y>
-      <w>92</w>
-      <h>52</h>
+      <x>640</x>
+      <y>780</y>
+      <w>115</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>AlgorithmTester
 --</panel_attributes>
@@ -298,10 +298,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>668</x>
-      <y>588</y>
-      <w>92</w>
-      <h>52</h>
+      <x>780</x>
+      <y>705</y>
+      <w>115</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>HashTableTester
 --</panel_attributes>
@@ -310,10 +310,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>500</y>
-      <w>308</w>
-      <h>168</h>
+      <x>385</x>
+      <y>595</y>
+      <w>385</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 </panel_attributes>
@@ -322,10 +322,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
-      <y>424</y>
-      <w>40</w>
-      <h>72</h>
+      <x>675</x>
+      <y>500</y>
+      <w>50</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;10.0;80.0;160.0</additional_attributes>
@@ -333,10 +333,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>508</x>
-      <y>484</y>
-      <w>116</w>
-      <h>80</h>
+      <x>580</x>
+      <y>575</y>
+      <w>145</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;180.0;270.0;180.0;270.0;10.0</additional_attributes>
@@ -344,10 +344,10 @@ bg=#6FFC86</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>28</y>
-      <w>260</w>
-      <h>80</h>
+      <x>370</x>
+      <y>5</y>
+      <w>325</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>DoubleNode&lt;Type&gt;
 --
@@ -369,10 +369,10 @@ bg=#F1C236</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>64</y>
-      <w>96</w>
-      <h>40</h>
+      <x>260</x>
+      <y>50</y>
+      <w>120</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0;220.0;10.0</additional_attributes>
@@ -380,10 +380,10 @@ bg=#F1C236</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>644</x>
-      <y>24</y>
-      <w>120</w>
-      <h>104</h>
+      <x>750</x>
+      <y>0</y>
+      <w>150</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>CircularList&lt;Type&gt;
 --
@@ -409,13 +409,63 @@ bg=#F98C39</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>596</x>
-      <y>64</y>
-      <w>56</w>
-      <h>16</h>
+      <x>690</x>
+      <y>50</y>
+      <w>70</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>160</y>
+      <w>315</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>NonLinear :: Graph
+--
+*- MAXIMUM : int*
+- adjacencyMatrix : bool [][]
+- weightCostMatrix : int [][]
+- graphData : Type[]
+- vertexCount : int
+
+--
+Graph() : Constructor
+
++ addVertex(const Type&amp; value): void
+
+*Connect Vertices*
++ addEdge(int source, int target): void
++ addEdgeUndirected(int source, int target) : void
++ addEdgeCost(int source, int target, int cost) : void
+
+*Disconnect Vertices*
++ removeEdge(int source, int target) : void
++ removeEdgeUndirected(int source, int target) : void
++ removeEdgeCost(int source, int target) : void
+
+*Accessor*
++ operator [] (int vertex) : Type &amp;
++ operator [] (int verteex) : Type const
++ size() const : int
+
+*Check Connnections*
++ hasUndirectedConnection(int sourc, int target) : const bool
++ areConnected(int source, int target) : const bool
++ neighbors(int vertex) : const std::set&lt;int&gt;
+
+*Traversal*
++ depthFirstTraversal(Graph&lt;Type&gt; &amp; graph, int vertex) : void
++ breadthFirstTraversal(Graph&lt;Type&gt; &amp; graph, int vertex) : void
++ costTraversal(Graph&lt;Type&gt; &amp; graph, int vertex) : void
+- depthFirstTraversal(Graph&lt;Type&gt; &amp; graph, int vertex, bool[] markedVertices) : void
+
+bg=#BA39F9</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
