@@ -154,10 +154,18 @@ void GraphTester :: compareTraversals()
 void GraphTester :: findCheapestTraversal()
 {
     int lowestCost = INT_MAX;
-    
+    int lowestIndex = -1;
+    int current = -1;
     for(int index = 0; index < puzzle.size(); index++)
     {
-    
+        current = puzzle.costTraversal(puzzle, index);
+        if(current < lowestCost && current != 0)
+        {
+            lowestCost = current;
+            lowestIndex = index;
+        }
     }
+    cout << "The lowest cost is: " << lowestCost << endl;
+    cout << "at index: " << lowestIndex<< endl;
 }
 
