@@ -25,6 +25,11 @@ public:
     void setLeftChild(BinaryTreeNode<Type> *);
     void setRightChild(BinaryTreeNode<Type> *);
     
+private:
+    BinaryTreeNode<Type> * root;
+    BinaryTreeNode<Type> * leftChild;
+    BinaryTreeNode<Type> * rightChild;
+    
 };
 
 template <class Type>
