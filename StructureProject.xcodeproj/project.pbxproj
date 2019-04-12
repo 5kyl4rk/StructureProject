@@ -45,6 +45,7 @@
 		A65A7434220A214E000C9D97 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		A65A7435220A214F000C9D97 /* Music.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Music.hpp; sourceTree = "<group>"; };
 		A65A7439220A2601000C9D97 /* node.uxf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = node.uxf; sourceTree = "<group>"; };
+		A66623F822610E3200D95AFA /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
 		A68943DF220CCA9C008D5683 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		A69D23E622120E850049E25E /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		A6A7432322023311008A224E /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 				A6A7432322023311008A224E /* LinearNode.hpp */,
 				A6E7E581221F281C00475084 /* DoubleNode.hpp */,
 				A6B54888222DC3F60089FCAA /* Graph.hpp */,
+				A66623F822610E3200D95AFA /* BinaryTreeNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
