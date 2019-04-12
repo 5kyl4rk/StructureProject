@@ -11,11 +11,11 @@
 #include "Node.hpp"
 
 template <class Type>
-class BinaryTreeNode
+class BinaryTreeNode : Node<Type>
 {
 public:
     BinaryTreeNode();
-    BinaryTreeNode(Type);
+    BinaryTreeNode(Type data);
     
     BinaryTreeNode<Type> * getRootNode();
     BinaryTreeNode<Type> * getLeftChild();
@@ -33,7 +33,7 @@ private:
 };
 
 template <class Type>
-BinaryTreeNode<Type> :: BinaryTreeNode()
+BinaryTreeNode<Type> :: BinaryTreeNode() : Node<Type>()
 {
     root = nullptr;
     leftChild = nullptr;
@@ -41,7 +41,7 @@ BinaryTreeNode<Type> :: BinaryTreeNode()
 }
 
 template <class Type>
-BinaryTreeNode<Type> :: BinaryTreeNode(Type)
+BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node<Type>(data)
 {
     root = nullptr;
     leftChild = nullptr;
