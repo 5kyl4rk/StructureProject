@@ -149,6 +149,7 @@ void GraphTester :: compareTraversals()
         cout<<endl;
         
     }
+    //a quote can be found at index 33
 }
 
 void GraphTester :: findCheapestTraversal()
