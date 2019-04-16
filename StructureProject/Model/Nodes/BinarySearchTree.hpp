@@ -24,7 +24,7 @@ protected:
     bool isBalanced(BinaryTreeNode<Type> * startNode);
     bool isComplete(BinaryTreeNode<Type> * startNode, int index, int size);
     
-    void inOrderTraversal(BinaryTreeNode<Tree> * inStart);
+    void inOrderTraversal(BinaryTreeNode<Type> * inStart);
     void preOrderTraversal(BinaryTreeNode<Type> * preStart);
     void postOrderTraversal(BinaryTreeNode<Type> * postStart);
     
@@ -38,7 +38,7 @@ protected:
 public:
     //MARK: Public Methods
     BinarySearchTree();
-    ~BinarySearchTree;
+    ~BinarySearchTree();
     
     BinaryTreeNode<Type> * getRoot();
     
@@ -50,7 +50,7 @@ public:
     int getSize();
     int getHeight();
     bool isComplete();
-    bool isBalenced();
+    bool isBalanced();
     
     bool contains(Type value);
     void insert(Type itemToInsert);
@@ -80,7 +80,7 @@ bool BinarySearchTree<Type> :: isComplete()
 }
 
 template <class Type>
-bool BinarySearchTree<Type> :: isBalance()
+bool BinarySearchTree<Type> :: isBalanced()
 {
     return false;
 }
@@ -98,7 +98,7 @@ void BinarySearchTree<Type> :: preOrderTraversal()
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: postOrderTraversal
+void BinarySearchTree<Type> :: postOrderTraversal()
 {
     
 }

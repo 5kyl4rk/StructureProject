@@ -11,13 +11,13 @@
 
 #include <iostream>
 #include "../Model/Nodes/BinaryTreeNode.hpp"
-//#include "../Model/Nodes/BinarySearchTree.hpp"
+#include "../Model/Nodes/BinarySearchTree.hpp"
 
 class BinaryTreeTester
 {
 private:
     BinaryTreeNode<int> testNode;
-    //BinarySearchTree<int> testTree;
+    BinarySearchTree<int> testTree;
 public:
     void treeStuff();
 };
