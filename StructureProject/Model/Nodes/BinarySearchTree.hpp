@@ -106,7 +106,44 @@ void BinarySearchTree<Type> :: postOrderTraversal()
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type item)
 {
+    BinaryTreeNode<Type> * insertMe = new BinaryTreeNode<Type>(item);
+    BinaryTreeNode<Type> * previous = nullptr;
+    BinaryTreeNode<Type> * current = this->root;
     
+    if(current == nullptr)
+    {
+        this->root = insertMe;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            previous = current;
+            if(item < current->getData())
+            {
+                current = current->getLeftChild();
+            }
+            else if (item > current->getData())
+            {
+                current = current->getRightChild();
+            }
+            else //Remove cerr after verification of understanding
+            {
+                cerr << "Item exists aleady - Exiting insert" << endl;
+                delete insertMe;
+                return;
+            }
+        }
+        if(previous->getData() > item)
+        {
+            previous->setLeftChild(insertMe);
+        }
+        else
+        {
+            previous->setRightChild(insertMe);
+        }
+        insertMe->setRootNode(previous);
+    }
 }
 
 template <class Type>
