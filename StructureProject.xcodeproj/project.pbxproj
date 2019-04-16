@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6041FF22266500D009E15D2 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = "<group>"; };
 		A6106C372214A6BE00E478DF /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		A6106C392214AE9F00E478DF /* LinearTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearTester.cpp; sourceTree = "<group>"; };
 		A6106C3A2214AE9F00E478DF /* LinearTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearTester.hpp; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		A6A74322220226DF008A224E /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				A6041FF22266500D009E15D2 /* BinarySearchTree.hpp */,
 				A6A7432422023955008A224E /* Linear */,
 				A6E16E9A21FF915F0070F74A /* Node.hpp */,
 				A6A7432322023311008A224E /* LinearNode.hpp */,
