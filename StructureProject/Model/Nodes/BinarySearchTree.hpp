@@ -64,7 +64,7 @@ public:
 template <class Type>
 BinarySearchTree<Type> :: BinarySearchTree()
 {
-    
+    this->root = nullptr;
 }
 
 template <class Type>
