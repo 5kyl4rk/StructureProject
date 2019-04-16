@@ -61,6 +61,7 @@ public:
     
 };
 
+
 template <class Type>
 int BinarySearchTree<Type> :: getHeight()
 {

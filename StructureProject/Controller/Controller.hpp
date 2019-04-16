@@ -16,6 +16,7 @@
 #include "./FileController.hpp"
 #include "../Testers/LinearTester.hpp"
 #include "../Testers/GraphTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
 using namespace std;
 
 class Controller
@@ -29,6 +30,7 @@ public:
     void testFiles();
     void testLinear();
     void testNonLinear();
+    void testTree();
 };
 
 #endif /* Controller_hpp */

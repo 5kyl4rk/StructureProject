@@ -8,7 +8,7 @@
 
 #ifndef Tree_h
 #define Tree_h
-#include "BinaryTreeNode.hpp"
+#include "../Nodes/BinaryTreeNode.hpp"
 
 template <class Type>
 class Tree

@@ -17,8 +17,9 @@ void Controller :: start()
 {
     //stopwatch.startTimer();
     cout << "Let's do something I guess ._." << endl;
-    testNonLinear();
+    //testNonLinear();
     //testLinear();
+    testBinaryTree();
     //usingNodes();
     //testFiles();
     //stopwatch.stopTimer();
@@ -71,4 +72,10 @@ void Controller :: testNonLinear()
 {
     GraphTester rotom;
     rotom.testGraphs();
+}
+
+void Controller :: testTree()
+{
+    BinaryTreeTester sudowoodo;
+    sudowoodo.treeStuff();
 }

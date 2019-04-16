@@ -57,13 +57,13 @@ BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRootNode()
 template <class Type>
 BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftChild()
 {
-    return this->left;
+    return this->leftChild;
 }
 
 template <class Type>
 BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightChild()
 {
-    return this->right;
+    return this->rightChild;
 }
 
 template <class Type>
