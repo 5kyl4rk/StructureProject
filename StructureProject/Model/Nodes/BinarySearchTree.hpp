@@ -61,6 +61,17 @@ public:
     
 };
 
+template <class Type>
+BinarySearchTree<Type> :: BinarySearchTree()
+{
+    
+}
+
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    //probably should add something to here
+}
 
 template <class Type>
 int BinarySearchTree<Type> :: getHeight()

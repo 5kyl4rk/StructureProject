@@ -11,7 +11,7 @@
 #include "Node.hpp"
 
 template <class Type>
-class BinaryTreeNode : Node<Type>
+class BinaryTreeNode : public Node<Type>
 {
 public:
     BinaryTreeNode();
@@ -75,12 +75,12 @@ void BinaryTreeNode<Type> :: setRootNode(BinaryTreeNode<Type> * newRoot)
 template <class Type>
 void BinaryTreeNode<Type> :: setLeftChild(BinaryTreeNode<Type> * left)
 {
-    this->left = left;
+    this->leftChild = left;
 }
 
 template <class Type>
 void BinaryTreeNode<Type> :: setRightChild(BinaryTreeNode<Type> * right)
 {
-    this->right = right;
+    this->rightChild = right;
 }
 #endif /* BinaryTreeNode_h */

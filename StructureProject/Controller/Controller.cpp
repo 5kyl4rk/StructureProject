@@ -19,7 +19,7 @@ void Controller :: start()
     cout << "Let's do something I guess ._." << endl;
     //testNonLinear();
     //testLinear();
-    testBinaryTree();
+    testTree();
     //usingNodes();
     //testFiles();
     //stopwatch.stopTimer();
