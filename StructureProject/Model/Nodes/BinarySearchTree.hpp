@@ -70,7 +70,7 @@ BinarySearchTree<Type> :: BinarySearchTree()
 template <class Type>
 BinarySearchTree<Type> :: ~BinarySearchTree()
 {
-    //probably should add something to here
+    //TODO:probably should add something to here
 }
 
 template <class Type>
@@ -114,10 +114,26 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNo
     }
 }
 
+
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    
+    preOrderTraversal(this->root);
+}
+/*
+ Pre-order traversal goes in the order Root, Left, Right
+ Great for building math problems
+ Notice that the non-recursive case does nothing
+ */
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        cout << currentNode->getData() << endl;
+        preOrderTraversal(currentNode->getLeftChild());
+        preOrderTraversal(currentNode->getRightChild());
+    }
 }
 
 template <class Type>
