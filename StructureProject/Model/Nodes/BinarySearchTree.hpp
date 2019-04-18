@@ -82,7 +82,21 @@ int BinarySearchTree<Type> :: getHeight()
 template <class Type>
 int BinarySearchTree<Type> :: getSize()
 {
-    return -1;
+    int size = 0;
+    
+    size += calculateSize(this->root);
+    
+    return size;
+}
+
+template <class Type>
+int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * current)
+{
+    if(current != nullptr)
+    {
+        return calculateSize(current->getLeftChild()) + calculateSize(current->getRightChild()) + 1;
+    }
+    return 0;
 }
 
 template <class Type>
