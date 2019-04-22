@@ -11,6 +11,7 @@
 
 #include "Tree.hpp"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -118,7 +119,34 @@ bool BinarySearchTree<Type> :: isComplete()
 template <class Type>
 bool BinarySearchTree<Type> :: isBalanced()
 {
+    return isBalanced(this->root);
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
+{
+    int leftHeight = 0;
+    int rightHeight = 0;
+    
+    if(current == nullptr)
+    {
+        return true;
+    }
+    
+    leftHeight = calculateHeight(current->getLeftChild());
+    rightHeight = calculateHeight(current->getRightChild());
+    
+    int heightDifference = abs(leftHeight - rightHeight);
+    bool leftBalanced = isBalanced(current->getLeftChild());
+    bool rightBalanced = isBalanced(current->getRightChild());
+    
+    if(heightDifference <= 1 && leftBalanced && rightBalanced)
+    {
+        return true;
+    }
+    
     return false;
+    
 }
 
 template <class Type>
