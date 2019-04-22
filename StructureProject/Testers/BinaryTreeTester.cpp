@@ -20,8 +20,15 @@ void BinaryTreeTester :: treeStuff()
     testTree.insert(5);
     testTree.insert(4);
     testTree.insert(6);
-    
+    cout<<"=== Int ==="<<endl;
+    cout<<"- Inorder"<<endl;
     testTree.inOrderTraversal();
+    
+    cout<<"- Preorder"<<endl;
+    testTree.preOrderTraversal();
+    
+    cout<<"- Postorder"<<endl;
+    testTree.postOrderTraversal();
     
     wordTree.insert("hello");
     wordTree.insert("sans undertale");
@@ -29,5 +36,14 @@ void BinaryTreeTester :: treeStuff()
     wordTree.insert("yooo");
     wordTree.insert("mario");
     
+    cout<<"=== String ==="<<endl;
+    cout<<"- Inorder"<<endl;
     wordTree.inOrderTraversal();
+    
+    cout<<"- Preorder"<<endl;
+    wordTree.preOrderTraversal();
+    
+    cout<<"- Postorder"<<endl;
+    wordTree.postOrderTraversal();
+    
 }
