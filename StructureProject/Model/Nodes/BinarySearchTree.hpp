@@ -74,6 +74,7 @@ BinarySearchTree<Type> :: ~BinarySearchTree()
     //TODO:probably should add something to here
 }
 
+//MARK:Informational
 template <class Type>
 int BinarySearchTree<Type> :: getHeight()
 {
@@ -169,6 +170,7 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
     
 }
 
+//MARK:Traversals
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal()
 {
@@ -229,6 +231,7 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * current
     }
 }
 
+//MARK:Insertion/removal/searching
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type item)
 {
@@ -360,6 +363,95 @@ void BinarySearchTree<Type> :: remove(Type item)
     }
     
     
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
+{
+    BinaryTreeNode<Type> * current;
+    BinaryTreeNode<Type> * previous;
+    BinaryTreeNode<Type> * temp;
+    
+    previous = removeMe->getRootNode();
+    
+    //Node is a leaf - has no kids
+    if(removeMe->getRightChild() == nullptr && removeMe->getLeftChild() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = nullptr;
+        
+        if(previous != nullptr && removeMe->getLeftChild() > previous->getData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && removeMe->getData() > previous->getData())
+        {
+            previous->setRightChild(removeMe);
+        }
+        
+        delete temp;
+    }
+    //Node has only a left child
+    else if (removeMe->getRightChild() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = removeMe->getLeftChild();
+        
+        if(previous != nullptr && temp->getData() < previous->getData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && temp->getData() > previous->getData())
+        {
+            previous->setRightNode(removeMe);
+        }
+        removeMe->setRootNode(previous);
+        
+        delete temp;
+    }
+    //Node has only a right child
+    else if(removeMe->getLeftChild() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = removeMe->getRightChild();
+        if(previous != nullptr && removeMe->getData() < previous->getData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && removeMe->getData() > previous->getData())
+        {
+            previous->setRightChild(removeMe);
+        }
+        removeMe->setRootNode(previous);
+        delete temp;
+    }
+    //Node has both children
+    else
+    {
+        current = getRightMostChild(removeMe->getLeftChild());
+        
+        previous = current->getRootNode();
+        removeMe->setData(current->getData());
+        
+        if(previous == nullptr)//removing from root
+        {
+            removeMe->setLeftChild(current->getLeftNode());
+        }
+        else
+        {
+            previous->setRightNode(current->getLeftChild());
+        }
+        if(current->getLeftChild() != nullptr)
+        {
+            current->getLeftChild()->setRootNode(removeMe);
+        }
+        delete current;
+    }
+    
+    if(removeMe == nullptr || removeMe->getRootNode() == nullptr)
+    {
+        this->root = removeMe;
+    }
 }
 
 
