@@ -113,8 +113,28 @@ int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * current)
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete()
 {
-    return false;
+    int index = 0;
+    int size = getSize();
+    
+    return isComplete(this->root, index, size);
 }
+
+template <class Type>
+bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int index, int size)
+{
+    if(startNode == nullptr)
+    {
+        return true;
+    }
+    
+    if(index >= size)
+    {
+        return false;
+    }
+    
+    return (isComplete(startNode->getLeftChild(), 2 * index + 1, size) && isComplete(startNode->getRightChild(), 2 * index + 2, size));
+}
+
 
 template <class Type>
 bool BinarySearchTree<Type> :: isBalanced()
