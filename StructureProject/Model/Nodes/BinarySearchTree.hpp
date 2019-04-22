@@ -275,12 +275,90 @@ void BinarySearchTree<Type> :: insert(Type item)
 template <class Type>
 bool BinarySearchTree<Type> :: contains(Type value)
 {
-    return false;
+    BinaryTreeNode<Type> * current = this->root;
+    if(current == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            if(value == current->getData())
+            {
+                return true;
+            }
+            else if(value < current->getData())
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
+        return false;
+    }
+    
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: remove(Type item)
 {
+    //step 1. find the node to remove
+    if(this->root==nullptr)
+    {
+        cout << "Empty tree so removal is not possible" << endl;
+        
+    }
+    else
+    {
+        BinaryTreeNode<Type> * current = this->root;
+        BinaryTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while(current != nullptr && !hasBeenFound)
+        {
+            if(current->getData() == item)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if(item < current ->getData())
+                {
+                    current = current->getLeftChild();
+                }
+                else
+                {
+                    current = current->getRightChild();
+                }
+            }
+        }
+        
+        //step 2. figure out how to remove that node while also not losing it's children
+        if(current == nullptr)
+        {
+            cerr<<"Item not fofund, removal unsuccessful"<<endl;
+        }
+        else if(hasBeenFound)
+        {
+            if(current == this->root)
+            {
+                removeNode(this->root);
+            }
+            else if(item < previous->getData())
+            {
+                removeNode(previous->getLeftChild());
+            }
+            else
+            {
+                removeNode(previous->getRightChild());
+            }
+        }
+    }
+    
     
 }
 
