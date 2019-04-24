@@ -71,7 +71,7 @@ BinarySearchTree<Type> :: BinarySearchTree()
 template <class Type>
 BinarySearchTree<Type> :: ~BinarySearchTree()
 {
-    //TODO:probably should add something to here
+    destroyTree(this->root);
 }
 
 //MARK:Informational
@@ -228,6 +228,17 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * current
         postOrderTraversal(currentNode->getLeftChild());
         postOrderTraversal(currentNode->getRightChild());
         cout << currentNode->getData() << endl;
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
+{
+    if(node != nullptr)
+    {
+        destroyTree(node->getLeftChild());
+        destroyTree(node->getRightChild());
+        delete node;
     }
 }
 
