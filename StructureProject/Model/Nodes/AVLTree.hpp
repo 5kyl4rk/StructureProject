@@ -54,24 +54,24 @@ void AVLTree<Type> :: remove(Type item)
 template <class Type>
 BinaryTreeNode<Type> * AVLTree<Type> :: insertNode(BinaryTreeNode<Type> * parent, Type value)
 {
-    if(parent == nullptr)
+    if(parent == nullptr) //if the current node is null
     {
-        parent = new BinaryTreeNode<Type>(value);
+        parent = new BinaryTreeNode<Type>(value); //make a new node
         
-        if(this->getRoot() == nullptr)
+        if(this->getRoot() == nullptr) //if the root is null AKA the tree is empty
         {
-            this->setRoot(parent);
+            this->setRoot(parent); //then make it the root
         }
         return parent;
     }
-    else if(value < parent->getData())
+    else if(value < parent->getData())// if value is less than current node
     {
-        parent->setLeftChild(insertNode(parent->getLeftChild(), value));
+        parent->setLeftChild(insertNode(parent->getLeftChild(), value));//keep going left until it can insert it
         parent = balanceSubTree(parent);
     }
-    else if(value > parent->getData())
+    else if(value > parent->getData())// if the the value is greater than current node
     {
-        parent->setRightChild(insertNode(parent->getRightChild(), value));
+        parent->setRightChild(insertNode(parent->getRightChild(), value));//keep going right until it can insert it
         parent = balanceSubTree(parent);
     }
     return parent;
@@ -124,5 +124,21 @@ BinaryTreeNode<Type> * AVLTree<Type> :: removeNode(BinaryTreeNode<Type> * parent
     
     return balanceSubTree(parent);
 }
+
+/*
+ A negative value means the right is greater than left
+ */
+template <class type>
+int AVLTree<Type> :: heightDifference(BinaryTreeNode<Type> * parent)
+{
+    int balance;
+    int leftHeight = this->calculateHeight(node->getLeftChild());
+    int rightHeight = this->calculateHeight(node->getRightChild());
+    balance = leftHeight - rightHeight;
+    return balance;
+}
+
+
+
 
 #endif /* AVLTree_h */
