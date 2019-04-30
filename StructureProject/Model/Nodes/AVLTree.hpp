@@ -138,7 +138,36 @@ int AVLTree<Type> :: heightDifference(BinaryTreeNode<Type> * parent)
     return balance;
 }
 
-
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * parent)
+{
+    int balanceFactor = heightDifference(parent);
+    
+    if(balanceFactor > 1)
+    {
+        if(heightDifference(parent->getLeftChild()) > 0)
+        {
+            parent = leftRotation(parent);
+        }
+        else
+        {
+            parent = rightRotation(parent);
+        }
+    }
+    else if(balanceFactor < -1)
+    {
+        if(heightDifference(parent->getRightChild()) >0)
+        {
+            parent = rightRotation(parent);
+        }
+        else
+        {
+            parent = leftRotation(parent);
+        }
+    }
+    
+    return parent;
+}
 
 
 #endif /* AVLTree_h */
