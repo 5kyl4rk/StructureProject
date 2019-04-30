@@ -64,18 +64,65 @@ BinaryTreeNode<Type> * AVLTree<Type> :: insertNode(BinaryTreeNode<Type> * parent
         }
         return parent;
     }
-    else if(value < parent->getNodeData())
+    else if(value < parent->getData())
     {
         parent->setLeftChild(insertNode(parent->getLeftChild(), value));
         parent = balanceSubTree(parent);
     }
-    else if(value > parent->getNodeData())
+    else if(value > parent->getData())
     {
         parent->setRightChild(insertNode(parent->getRightChild(), value));
         parent = balanceSubTree(parent);
     }
     return parent;
     
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: removeNode(BinaryTreeNode<Type> * parent, Type value)
+{
+    if(parent == nullptr)
+    {
+        return parent;
+    }
+    if(value < parent->getData())
+    {
+        parent->setLeftChild(removeNode(parent->getLeftChild(), value));
+    }
+    else if(value > parent->getData())
+    {
+        parent->setRightChild(removeNode(parent->getRightChild(), value));
+    }
+    else
+    {
+        BinaryTreeNode<Type> * temp;
+        if(parent->getLeftChild() == nullptr & parent->getRightChild() == nullptr)
+        {
+            temp = parent;
+            delete temp;
+        }
+        else if(parent->getLeftChild() == nullptr)
+        {
+            *parent = *parent->getRightChild();
+        }
+        else if(parent->getRightChlid() == nullptr)
+        {
+            *parent = *parent->getLeftChild();
+        }
+        else
+        {
+            BinaryTreeNode<Type> * leftMost = this->getLeftMostChild(parent->getRightChild());
+            parent->setData(leftMost->getData());
+            parent->setRightChild(removeNode(parent->getRightChild(), value));
+        }
+    }
+    
+    if(parent == nullptr)
+    {
+        return parent;
+    }
+    
+    return balanceSubTree(parent);
 }
 
 #endif /* AVLTree_h */

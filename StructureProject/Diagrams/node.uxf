@@ -578,6 +578,15 @@ bg=#E683FF</panel_attributes>
 # isComplete(BinaryTreeNode&lt;Type&gt; * startNode, int index, int size): bool
 
 *Data Methods*
++ insert(Type): void
++ contains(Type): bool
++ remove(Type): void
+
+*Recursive Data Helpers*
+# removeNode(BinaryTreeNode&lt;Type&gt; * removeMe): void
+
+
+
 bg=#FFA6E6</panel_attributes>
     <additional_attributes/>
   </element>
